@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple, focused to-do list for keeping track of what matters today."
+    />
+    <title>My To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="todo-card" aria-labelledby="page-title">
+        <header class="card-header">
+          <div class="eyebrow"><span class="status-dot"></span> YOUR DAY, IN FOCUS</div>
+          <h1 id="page-title">My To-Do List<span>.</span></h1>
+          <p class="intro">A little progress adds up. What would you like to get done?</p>
+        </header>
+
+        <form class="task-form" id="task-form">
+          <label class="visually-hidden" for="task-input">Enter a task</label>
+          <input
+            id="task-input"
+            name="task"
+            type="text"
+            placeholder="e.g. Plan the week ahead"
+            autocomplete="off"
+            aria-describedby="form-message"
+          />
+          <button class="add-button" type="submit">
+            <span class="plus-icon" aria-hidden="true">+</span>
+            <span>Add Task</span>
+          </button>
+        </form>
+        <p class="form-message" id="form-message" aria-live="polite"></p>
+
+        <div class="list-heading">
+          <h2>YOUR TASKS</h2>
+          <span class="task-count" id="task-count" aria-live="polite">0 tasks</span>
+        </div>
+
+        <ul class="task-list" id="task-list" aria-label="To-do tasks"></ul>
+        <div class="empty-state" id="empty-state">
+          <div class="empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="9" y="7" width="30" height="35" rx="6" stroke="currentColor" stroke-width="2" />
+              <path d="M17 17h14M17 24h14M17 31h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="m30 34 2 2 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Your list is clear</h3>
+          <p>Add a task above and take the first step.</p>
+        </div>
+
+        <footer class="card-footer">
+          <span><span class="footer-sparkle" aria-hidden="true">✦</span> One thing at a time.</span>
+          <span>Only saved for this visit</span>
+        </footer>
+      </section>
+      <p class="page-note">A calm space to make things happen.</p>
+    </main>
+  </body>
+</html>
